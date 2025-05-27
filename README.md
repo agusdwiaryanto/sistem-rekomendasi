@@ -1,66 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>🎯 Sistem Rekomendasi Wisata Berbasis Web</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<p>
+Repositori ini berisi implementasi sistem rekomendasi wisata berbasis web yang dikembangkan sebagai bagian dari penelitian skripsi. Sistem ini dirancang untuk membantu pengguna dalam menemukan destinasi wisata yang sesuai dengan preferensi mereka, dengan memanfaatkan teknologi Laravel untuk frontend dan FastAPI untuk backend rekomendasi.
 </p>
 
-## About Laravel
+<h2>📌 Deskripsi Proyek</h2>
+<p>
+Sistem ini bertujuan untuk memberikan rekomendasi destinasi wisata kepada pengguna berdasarkan preferensi mereka, seperti jenis wisata, lokasi, dan fasilitas yang diinginkan. Dengan mengintegrasikan algoritma rekomendasi dan antarmuka pengguna yang intuitif, sistem ini mempermudah proses perencanaan perjalanan wisata.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h2>🧩 Fitur Utama</h2>
+<ul>
+  <li><strong>Input Preferensi Pengguna:</strong> Pengguna dapat memasukkan preferensi mereka terkait jenis wisata, lokasi, dan fasilitas yang diinginkan.</li>
+  <li><strong>Rekomendasi Destinasi:</strong> Sistem memberikan daftar destinasi wisata yang sesuai dengan preferensi pengguna.</li>
+  <li><strong>Detail Destinasi:</strong> Informasi lengkap mengenai destinasi wisata, termasuk deskripsi, lokasi, dan fasilitas yang tersedia.</li>
+  <li><strong>Antarmuka Pengguna Responsif:</strong> Desain antarmuka yang responsif dan mudah digunakan, dibangun dengan Bootstrap.</li>
+</ul>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h2>🛠️ Teknologi yang Digunakan</h2>
+<ul>
+  <li><strong>Frontend:</strong> Laravel, Blade Templates, Bootstrap</li>
+  <li><strong>Backend:</strong> FastAPI (Python)</li>
+  <li><strong>Database:</strong> MySQL</li>
+  <li><strong>Lainnya:</strong> Tailwind CSS, Vite</li>
+</ul>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h2>📁 Struktur Folder</h2>
+<pre>
+├── app/                    # Direktori aplikasi Laravel
+├── bootstrap/              # File bootstrap Laravel
+├── config/                 # Konfigurasi aplikasi
+├── database/               # Migrasi dan seeder database
+├── public/                 # Direktori publik untuk aset
+├── resources/              # View dan aset frontend
+├── routes/                 # Definisi rute aplikasi
+├── storage/                # Penyimpanan file sementara
+├── tests/                  # Pengujian aplikasi
+├── rekomendasi.py          # Skrip rekomendasi dengan FastAPI
+├── rekomendasi.ipynb       # Notebook Jupyter untuk analisis
+├── db-wisata.sql           # Skrip SQL untuk database wisata
+├── .env.example            # Contoh file konfigurasi lingkungan
+├── README.md               # Dokumentasi proyek
+└── ...
+</pre>
 
-## Learning Laravel
+<h2>🚀 Cara Menjalankan Proyek</h2>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h3>1. Clone Repositori</h3>
+<pre><code>
+git clone https://github.com/agusdwiaryanto/sistem-rekomendasi.git
+cd sistem-rekomendasi
+</code></pre>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<h3>2. Menjalankan Aplikasi Laravel</h3>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p><strong>a. Instalasi Dependensi</strong></p>
+<pre><code>
+composer install
+npm install
+</code></pre>
 
-## Laravel Sponsors
+<p><strong>b. Konfigurasi Lingkungan</strong></p>
+<pre><code>
+cp .env.example .env
+php artisan key:generate
+</code></pre>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<p><strong>c. Migrasi dan Seeder Database</strong></p>
+<pre><code>
+php artisan migrate --seed
+</code></pre>
 
-### Premium Partners
+<p><strong>d. Menjalankan Server</strong></p>
+<pre><code>
+php artisan serve
+</code></pre>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+<h3>3. Menjalankan Backend FastAPI</h3>
 
-## Contributing
+<p><strong>a. Instalasi Dependensi</strong></p>
+<pre><code>
+pip install -r requirements.txt
+</code></pre>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p><strong>b. Menjalankan Server FastAPI</strong></p>
+<pre><code>
+uvicorn rekomendasi:app --reload
+</code></pre>
 
-## Code of Conduct
+<h2>📷 Screenshot (Opsional)</h2>
+<p><em>Tambahkan screenshot antarmuka pengguna di sini untuk memberikan gambaran visual tentang aplikasi.</em></p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<h2>📄 Lisensi</h2>
+<p>Proyek ini dilisensikan di bawah <a href="LICENSE">MIT License</a>.</p>
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h2>🙌 Kontribusi</h2>
+<p>
+Kontribusi sangat diterima! Silakan fork repositori ini dan ajukan pull request untuk perbaikan atau penambahan fitur.
+</p>
